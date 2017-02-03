@@ -1,0 +1,23 @@
+EC2Instance:
+  Type: AWS::EC2::Instance
+  Properties:
+    SecurityGroups:
+      - !ImportValue AccountSG
+      - !Base64
+        "Fn::Sub": EwuePJgHH6KpvNme2nYYjw==
+      - !Sub
+        - "abc${AWS::Region}"
+        - {}
+      - "Fn::ImportValue": !FindInMap
+        - "TypeMap"
+        - !Ref "Env"
+        - "Id"
+      - !Select [ "", "" ]
+      - !GetAZs { Ref: "AWS::Region" }
+      - Ref: abc
+      - !GetAtt logicalNameOfResource.attributeName
+      - !GetAtt [ logicalNameOfResource, attributeName ]
+      - !Join
+        - "."
+        - - logicalNameOfResource
+          - attributeName
