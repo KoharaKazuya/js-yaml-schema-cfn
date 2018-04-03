@@ -7,7 +7,6 @@
     "url": "https://github.com/KoharaKazuya/js-yaml-schema-cfn/issues"
   },
   "dependencies": {
-    "glob": "^7.1.1",
     "js-yaml": "^3.7.0"
   },
   "devDependencies": {
