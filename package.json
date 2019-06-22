@@ -10,7 +10,7 @@
     "js-yaml": "^3.7.0"
   },
   "devDependencies": {
-    "eslint": "^3.14.0"
+    "eslint": "^5.16.0"
   },
   "homepage": "https://github.com/KoharaKazuya/js-yaml-schema-cfn",
   "keywords": [
