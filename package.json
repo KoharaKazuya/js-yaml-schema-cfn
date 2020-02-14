@@ -1,7 +1,7 @@
 {
   "name": "js-yaml-schema-cfn",
   "description": "AWS CloudFormation YAML Schema for js-yaml",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "author": "KoharaKazuya",
   "bugs": {
     "url": "https://github.com/KoharaKazuya/js-yaml-schema-cfn/issues"
