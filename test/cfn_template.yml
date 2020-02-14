@@ -1,5 +1,13 @@
+Conditions:
+  CreateProdResources:
+    "Fn::And":
+      - "Fn::Equals": ["sg-mysggroup", {"Ref": "ASecurityGroup"}]
+      - Condition: SomeOtherCondition1
+      - !Condition SomeOtherCondition2
+
 EC2Instance:
   Type: AWS::EC2::Instance
+  Condition: CreateProdResources
   Properties:
     SecurityGroups:
       - !ImportValue AccountSG
@@ -21,3 +29,4 @@ EC2Instance:
         - "."
         - - logicalNameOfResource
           - attributeName
+      - !If [CreateLargeSize, 100, 10]
